@@ -1,4 +1,4 @@
-package ndr;
+package ndr.tetris;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;

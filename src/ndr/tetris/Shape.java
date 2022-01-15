@@ -1,4 +1,4 @@
-package ndr;
+package ndr.tetris;
 
 import java.util.Random;
 
@@ -19,7 +19,7 @@ public class Shape {
 
     private void initShape() {
 
-        coords = new int[6][2];
+        coords = new int[4][2];
 
         coordsTable = new int[][][] {
                 { { 0, 0 },   { 0, 0 },   { 0, 0 },   { 0, 0 } },

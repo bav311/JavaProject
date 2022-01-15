@@ -1,6 +1,6 @@
-package ndr;
+package ndr.tetris;
 
-import ndr.Shape.Tetrominoe;
+import ndr.tetris.Shape.Tetrominoe;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -62,7 +62,7 @@ public class Board extends JPanel {
         clearBoard();
         newPiece();
 
-        int PERIOD_INTERVAL = 500;
+        int PERIOD_INTERVAL = 300;
         timer = new Timer(PERIOD_INTERVAL, new GameCycle());
         timer.start();
     }
