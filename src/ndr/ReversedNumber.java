@@ -1,6 +1,6 @@
 package ndr;
 
-public class Reversed {
+class Reversed {
     public static void main(String[] args) {
         int num = 123456789, reversed = 0;
         while (num != 0) {

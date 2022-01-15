@@ -23,9 +23,9 @@ public class Panel {
         frame.add(myPanel2);
 
 
-        JButton button = new JButton("Button");
-        JButton button1 = new JButton("Button");
-        JButton button2 = new JButton("Button");
+        JButton button = new JButton("Button1");
+        JButton button1 = new JButton("Button2");
+        JButton button2 = new JButton("Button3");
         myPanel.add(button);
         myPanel1.add(button1);
         myPanel2.add(button2);
