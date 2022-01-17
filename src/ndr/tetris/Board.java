@@ -62,7 +62,7 @@ public class Board extends JPanel {
         clearBoard();
         newPiece();
 
-        int PERIOD_INTERVAL = 300;
+        int PERIOD_INTERVAL = 500;
         timer = new Timer(PERIOD_INTERVAL, new GameCycle());
         timer.start();
     }
