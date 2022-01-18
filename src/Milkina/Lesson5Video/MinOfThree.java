@@ -1,4 +1,4 @@
-package Milkina.Lesson4Video;
+package Milkina.Lesson5Video;
 import java.util.Scanner;
 
 public class MinOfThree {
@@ -14,7 +14,7 @@ public class MinOfThree {
     }
 
     public static double getVel(Scanner scan) {
-        System.out.print("Введите число ");
+        System.out.print("Введите 3 числа ");
         if (scan.hasNextDouble()) {
             return scan.nextDouble();
         } else {
