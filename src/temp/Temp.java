@@ -5,7 +5,7 @@ public class Temp {
         int n = 100;
         int []arr = new int [n];
         for (int i = 0; i < arr.length; i++) {
-            arr[i]= (int) (Math.random() * (20+1)-10); // -10 +10
+            arr[i]= (int) (Math.random() * (200+1)-100); // -100 +100
         }
 
         for (int i:arr) {
