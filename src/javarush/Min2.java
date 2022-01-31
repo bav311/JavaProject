@@ -3,12 +3,12 @@
 пока не будет введено что-то другое: например, строка или символ.
 Должно быть введено минимум два числа. Если введено меньше, то такую ситуацию
 обрабатывать не нужно, а программа может быть завершена с ошибкой. 2. Вывести*/
-package temp;
+package javarush;
 
 
 import java.util.Scanner;
 
-class Temp {
+class Min2 {
     public static void main(String[] args) {
         Scanner scan = new Scanner("88 44 22 11 0 -9 -100");
         int min = Integer.MAX_VALUE;

@@ -31,13 +31,14 @@ public class GuessTheNumber {
 
     }
 
-      private static String name (int counter){
-          return switch (counter) {
-              case 1 -> "-й попытки";
-              case 2, 3 -> "-х попыток";
-              default -> null;
-          };
-      }
+
+    private static String name(int counter) {
+        return switch (counter) {
+            case 1 -> "-й попытки";
+            case 2, 3 -> "-х попыток";
+            default -> null;
+        };
+    }
 
 
 }
