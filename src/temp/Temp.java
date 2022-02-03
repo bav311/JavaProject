@@ -5,26 +5,8 @@
 обрабатывать не нужно, а программа может быть завершена с ошибкой. 2. Вывести*/
 package temp;
 
-
-import java.util.Scanner;
-
 class Temp {
     public static void main(String[] args) {
-        Scanner scan = new Scanner("88 44 22 11 0 -9 -100");
-        int min = Integer.MAX_VALUE;
-        int temp = Integer.MAX_VALUE;
-
-        while (scan.hasNextInt()){
-            int x = scan.nextInt();
-            temp = min;
-            if (x < min){
-                min = x;
-            }
-        }
-//        System.out.println(min);
-        System.out.println(temp);
-
-
 
     }
 }
