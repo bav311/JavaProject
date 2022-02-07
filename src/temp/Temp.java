@@ -1,20 +1,24 @@
 package temp;
 
-class Temp {
-    public static void main(String[] args) {
-        int[][] table = new int[10][10];
-        for (int i = 0; i < 10; i++) {
-            for (int j = 0; j < 10; j++) {
-                table[i][j] = (i + 1) * (j +1);
-            }
-        }
+public class Temp {
+    public static int[][][][][] multiArray = new int[2][3][4][2][3];
 
-        for (int i = 0; i < table.length; i++){
-            for (int j = 0; j < table[i].length; j++)
-                System.out.print(table[i][j] + "\t");
+    public static void main(String[] args) {
+        for (int i = 0; i < multiArray.length; i++) {
+            for (int j = 0; j < multiArray[i].length; j++) {
+                for (int k = 0; k < multiArray[i][j].length; k++) {
+                    for (int l = 0; l < multiArray[i][j][k].length; l++) {
+                        for (int m = 0; m < multiArray[i][j][k][l].length; m++) {
+                            System.out.print(multiArray[i][j][k][l][m] + " ");
+                        }
+
+                        System.out.println();
+                    }
+                    System.out.println();
+                }
+                System.out.println();
+            }
             System.out.println();
         }
-
-        }
-
     }
+}
