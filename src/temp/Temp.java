@@ -1,26 +1,20 @@
 package temp;
 
-import java.util.Arrays;
-
 class Temp {
     public static void main(String[] args) {
-        int[] arrays = new int[11];
-        int valueStart = 8;
-        int valueEnd = 1;
-
-        for (int i = 0; i < arrays.length; i++) {
-            if (arrays.length % 2 == 0){
-                Arrays.fill(arrays,0,arrays.length/2,valueStart);
-                Arrays.fill(arrays,arrays.length/2,arrays.length,valueEnd);
-            } else {
-                Arrays.fill(arrays,0,arrays.length/2+1,valueStart);
-                Arrays.fill(arrays,arrays.length/2+1,arrays.length,valueEnd);
+        int[][] table = new int[10][10];
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                table[i][j] = (i + 1) * (j +1);
             }
+        }
+
+        for (int i = 0; i < table.length; i++){
+            for (int j = 0; j < table[i].length; j++)
+                System.out.print(table[i][j] + "\t");
+            System.out.println();
+        }
 
         }
 
-        System.out.println(Arrays.toString(arrays));
-
-
     }
-}
