@@ -10,9 +10,8 @@
 Для сортировки массива можно использовать метод Arrays.sort(int[]).
 При тестировании значения переменных класса Solution будут разными.*/
 package javarush;
-
 public class ChessBoard {
-    public static String chessBoardCoord(int a, int b) {
+    public static String chessBoardCord(int a, int b) {
         String letters = "abcdefgh";
         String numbers = "87654321";
         if ((a > 7)|| (b>7)) return null; //если номер за пределами доски, возвращаем значение по умолчанию - null
@@ -24,14 +23,14 @@ public class ChessBoard {
         for (int i = 0; i < chessBoard.length; i++) {
             for (int j = 0; j < chessBoard[i].length; j++) {
                 if ((i+j) %2 ==0) {
-                    chessBoard[i][j] = "W" + chessBoardCoord(j,i);
-                } else chessBoard[i][j] = "B" + chessBoardCoord(j,i);
+                    chessBoard[i][j] = "W" + chessBoardCord(j,i);
+                } else chessBoard[i][j] = "B" + chessBoardCord(j,i);
             }
         }
 
-        for (int i = 0; i < chessBoard.length; i++) {
-            for (int j = 0; j < chessBoard[i].length; j++) {
-                System.out.print(chessBoard[i][j] + "\t");
+        for (String[] strings : chessBoard) {
+            for (String string : strings) {
+                System.out.print(string + "\t");
 
             }
             System.out.println();
@@ -40,5 +39,4 @@ public class ChessBoard {
 
 
     }
-
 }
