@@ -13,5 +13,6 @@ public class DivideTheArray {
         result[1] = Arrays.copyOfRange(array, size, array.length);
 
         new ArrayPrint(result);
+        System.out.println(size);
     }
 }

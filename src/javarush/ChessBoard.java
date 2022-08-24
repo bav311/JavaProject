@@ -11,7 +11,7 @@
 При тестировании значения переменных класса Solution будут разными.*/
 package javarush;
 
-public class Test {
+public class ChessBoard {
     public static String chessBoardCoord(int a, int b) {
         String letters = "abcdefgh";
         String numbers = "87654321";
