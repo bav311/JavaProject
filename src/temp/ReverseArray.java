@@ -16,7 +16,7 @@
 package temp;
 
 
-class Temp {
+class ReverseArray {
     public static void main(String[] args) {
         int[] array = {11, 12, 13, 14, 15, 16, 17, 18, 19, 110};
         printArray(array);
