@@ -1,3 +1,5 @@
+git ssh windows
 https://only-to-top.ru/blog/tools/2019-12-08-git-ssh-windows.html
 
+Generating a new SSH key and adding it to the ssh-agent (full)
 https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
