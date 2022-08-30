@@ -1,0 +1,98 @@
+Создайте ключ ssh
+
+$ ssh-keygen -t rsa -C "your_email@example.com"
+
+Generating public/private rsa key pair.
+# Enter file in which to save the key (/c/Users/you/.ssh/id_rsa): [Press enter]
+Если вы нажмете Enter без ввода, будет использовано имя файла по умолчанию (настоятельно рекомендуется !!!), и два файла id_rsa и id_rsa.pub будут сгенерированы в каталоге ~ / .ssh
+
+Затем вам будет предложено ввести пароль
+
+Enter passphrase (empty for no passphrase): 
+# Enter same passphrase again:
+Этот пароль - пароль, который необходимо вводить каждый раз, когда вы нажимаете. Аналогично, вы можете пропустить шаг без ввода пароля и нажать Enter, чтобы пропустить шаг, чтобы вам не приходилось вводить пароль при нажатии.
+
+Тогда он будет отображаться следующим образом
+
+Your identification has been saved in /c/Users/saltyfish/.ssh/id_rsa.
+Your public key has been saved in /c/Users/saltyfish/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:BRxQ5G4VITTmcxEO9da8AL8MIg9Aw/2bRgQiR3D4Xto qxy65535@gmail.com
+The key's randomart image is:
++---[RSA 2048]----+
+|    .o. oO&+*=   |
+|     .o..O+* + o |
+|       .o.B.+..oo|
+|        .=.= oo o|
+|        So*.+. o.|
+|         =+o.Eo .|
+|        .  .   o |
+|                 |
+|                 |
++----[SHA256]-----+
+
+Добавьте ключ ssh в github
+Перейдите в каталог генерации ключей ~ / .ssh, найдите файл id_rsa.pub и откройте его в редакторе, скопируйте содержимое внутрь;
+Выберите новый ключ SSH в ключах SSH в github-> setting-> SSH и GPG, вставьте в него содержимое, скопированное из id_rsa.pub, и нажмите Добавить ключ SSH.
+add ssh key
+
+Проверьте ключ SSH
+
+
+$ ssh -T git@github.com
+
+Даже если вы получите следующий ответ
+
+$ ssh -T git@github.com
+Hi bav311! You've successfully authenticated, but GitHub does not provide shell access.
+
+
+5. Нажмите, используя SSH
+Введите remote -v в git bash, чтобы просмотреть текущий удаленный URL
+
+$ git remote -v
+
+Если полученное соединение начинается с https, например
+
+origin  git@github.com:bav311/JavaProject.git  (fetch)
+origin  git@github.com:bav311/JavaProject.git  (push)
+
+Это показывает, что доступ к хранилищу осуществляется по протоколу https.Если вы не хотите вводить пароль каждый раз после настройки ключа ssh, его необходимо заменить на протокол git:
+
+$ git remote set-url origin git@github.com:bav311/JavaProject.git
+
+
+В будущем для git push пароль не требуется
+
+Возникшие проблемы
+1. Используйте ssh -T, чтобы появилось разрешение Отказано (publickey).
+Причина: пара ключей SSH не совпадает. Основной путь этой ошибки не совпадает с полным путем к ключу, поэтому локальный инструмент SSH не может найти правильный ключ.
+Решение. Сначала проверьте, действительно ли два файла, сгенерированные на шаге 2, находятся в пути ~ / .ssh, если нет, переместите их.
+Второй момент очень важен: если вы настроили имя файла для ключа ssh на шаге 2, причина в том, что ваше имя не соответствует имени, заданному в ssh, поэтому вам нужно Добавьте ключ вручную. Многие учебные пособия, вероятно, не являются системами Windows. , Прямая команда ввода
+
+$ ssh-add ~ / .ssh / имя вашего файла
+1
+Тогда есть проблема 2
+
+2. Не удалось открыть соединение с вашим агентом аутентификации при выполнении ssh-add
+Фактически, секретный ключ пользовательского имени должен быть передан ssh-agent для управления:GitHub help:Generating a new SSH key and adding it to the ssh-agent
+
+# start the ssh-agent in the background
+$ eval $(ssh-agent -s)
+Agent pid 59566
+$ ssh-add ~/.ssh/id_rsa
+1
+2
+3
+4
+Но это очень хлопотно, нужно ли играть такую ??прелюдию каждый раз, когда вы перезапускаете git bash? ?
+Конечно, нет, поэтому этот код можно добавить в скрипт запуска git bash.
+Используйте редактор, чтобы открыть файл etc / bash.bashrc в каталоге установки Git и добавить две строки в конце
+
+eval "$(ssh-agent -s)"
+ ssh-add ~ / .ssh / имя вашего файла
+1
+2
+Просто сохраните и выйдите.
+
+В дополнение к изменению имени файла ключа ssh, ssh-add также можно использовать для изменения пути к ключу, например, ssh-add your_path / your_key
