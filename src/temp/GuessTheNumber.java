@@ -29,8 +29,7 @@ public class GuessTheNumber {
                 ((hidden == guessed) ? "выиграли" : "проиграли загаданное число " + hidden));
         System.out.println("Сыграем еще раз? ДА - 1, НЕТ - 0");
 
-    }
-
+        }
 
     private static String name(int counter) {
         return switch (counter) {
