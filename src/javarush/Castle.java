@@ -13,14 +13,15 @@ public class Castle {
 
     public static void main(String[] args) {
         for (int i = 0; i < deadMen.length; i++) {
-            destroyDeadMan(deadMen[i]);
+            String str = deadMen[i];
+            System.out.println(destroyDeadMan(str));
         }
-
     }
 
-    public static void destroyDeadMan(String str) {
-        System.out.println(str + " был уничтожен");
-        return;
+
+    public static String destroyDeadMan(String str) {
+        str = str + " был уничтожен";
+        return str;
 
     }
 }
