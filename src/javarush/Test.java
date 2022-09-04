@@ -1,30 +1,30 @@
-/*Замок чернобайта. Создай метод String destroyDeadMan(String), который будет принимать
-на вход "имя" мертвеца и возвращать фразу "<имя> был уничтожен",
-где <имя> — значение аргумента метода destroyDeadMan.
-В методе main вызови метод destroyDeadMan(String) для каждого мертвеца из списка deadMen,
-результат вызова выведи на экран.*/
+/*Создай метод switchSword(String) с параметром типа String,
+который будет выводить фразу "Меч переключен в <параметр> режим.",
+где <параметр> — значение аргумента метода switchSword.
+Вызови метод switchSword() с нужным параметром и в нужном месте метода main.
+Остальной код метода main не изменяй.*/
 
 package javarush;
 
+import java.util.Arrays;
 
 public class Test {
-    public static String[] deadMen = {"мертвец_1", "мертвец_2", "мертвец_3", "мертвец_4", "мертвец_5",
-            "мертвец_6", "мертвец_7", "мертвец_8"};
+    public static void fill(int[] data, int from, int to, int value)
+    {
+        if (from < 0 || to > data.length)
+            return;
 
-    public static void main(String[] args) {
-
-        for (int i = 0; i < deadMen.length; i++) {
-            System.out.println(deadMen[i]);
-
+        for (int i = from; i < to; i++)
+        {
+            data[i] = value;
         }
-
     }
 
-     public static String destroyDeadMan(String name) {
-        name = "destroyd";
-         for (int i = 0; i < deadMen.length; i++) {
-         deadMen[i] = deadMen[i] + name;
-         }
-        return name;
+    public static void main(String[] args)
+    {
+        int[] months = {1, 2, 3, 4, 5, 6, 7, 8 ,9, 10, 11, 12};
+        System.out.println(Arrays.toString(months));
+        fill(months, 2, 12, 8);
+        System.out.println(Arrays.toString(months));
     }
 }
