@@ -51,12 +51,10 @@ public class Diablo {
 
     public static int amigoLostLife() {
         return amigoLives--;
-
     }
 
     public static void diabloLostLife() {
         diabloLives -= 3;
-
     }
 
     public static int amigoAttacks() {
@@ -68,12 +66,13 @@ public class Diablo {
     }
 
     public static int diabloDefends() {
+        diabloAttacks();
         return (getRandomNumber(3));
     }
 
     public static void findDiablo() {
-        Scanner scanner = new Scanner(System.in);
         System.out.println(getFirstPositionPhrase);
+        Scanner scanner = new Scanner(System.in);
         while (true) {
             int position = scanner.nextInt();
             if (position == diabloPosition) {
@@ -83,7 +82,6 @@ public class Diablo {
                 System.out.println(getPositionPhrase);
             }
         }
-
     }
 
     public static int getRandomNumber(int range) {
@@ -91,14 +89,25 @@ public class Diablo {
     }
 
     public static void battle() {
-        while ((amigoLives > 1) | (diabloLives > 3)) {
-            if (amigoAttacks() == diabloDefends()) {
-                amigoLostLife();
-                System.out.println(diabloDefendPhrase);
-            } else {
-                diabloLostLife();
-                System.out.println(amigoAttackPhrase);
-            }
+        if (amigoLives > 0 || diabloLives > 0) {
+            for (int i = 1; (amigoLives > 0 || diabloLives > 0); i++)
+                if (amigoAttacks() != diabloDefends()) {
+                    diabloLostLife();
+                    System.out.println(amigoAttackPhrase);
+                    System.out.println(diabloLives);
+                    if (diabloLives == 0) {
+                        System.out.println(winPhrase);
+                        break;
+                    } else {
+                        amigoLostLife();
+                        System.out.println(diabloDefendPhrase);
+                        System.out.println(amigoLives);
+                    }
+                    if (amigoLives == 0) {
+                        System.out.println(loosePhrase);
+                        break;
+                    }
+                }
         }
     }
 }
