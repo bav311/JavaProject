@@ -40,7 +40,7 @@ public class Diablo {
     public static int diabloLives = 9;
 
     public static void main(String[] args) {
-        diabloPosition = getRandomNumber(4);
+        diabloPosition = getRandomNumber(1);
 
         findDiablo();
         battle();
@@ -67,7 +67,7 @@ public class Diablo {
 
     public static int diabloDefends() {
         diabloAttacks();
-        return (getRandomNumber(3));
+        return getRandomNumber(3);
     }
 
     public static void findDiablo() {
@@ -89,7 +89,7 @@ public class Diablo {
     }
 
     public static void battle() {
-        if (amigoLives > 0 || diabloLives > 0) {
+//        if (amigoLives > 0 || diabloLives > 0) {
             for (int i = 1; (amigoLives > 0 || diabloLives > 0); i++)
                 if (amigoAttacks() != diabloDefends()) {
                     diabloLostLife();
@@ -108,6 +108,6 @@ public class Diablo {
                         break;
                     }
                 }
-        }
+//        }
     }
 }

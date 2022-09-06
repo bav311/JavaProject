@@ -15,38 +15,76 @@ public class Test {
     public static int diabloLives = 9;
 
     public static void main(String[] args) {
-        diabloPosition = getRandomNumber(4);
+        diabloPosition = getRandomNumber(1);
         findDiablo();
-
+        battle();
+        if (isAmigoWin()){
+            System.out.println(winPhrase);
+        } else {
+            System.out.println(loosePhrase);
+        }
+        System.out.println(amigoLives);
+        System.out.println(diabloLives);
     }
 
     public static void amigoLostLife() {
-        amigoLives--;
+        amigoLives -= 3;
     }
+
     public static void diabloLostLife() {
         diabloLives -= 3;
     }
 
     public static int amigoAttacks() {
         return getRandomNumber(3);
-
     }
+
+    public static int diabloAttacks() {
+        return (getRandomNumber(3));
+    }
+
     public static int diabloDefends() {
+        diabloAttacks();
         return getRandomNumber(3);
     }
 
     public static void findDiablo() {
         System.out.println(getFirstPositionPhrase);
         Scanner scan = new Scanner(System.in);
-        while (true){
+        while (true) {
             int position = scan.nextInt();
-            if (position== diabloPosition) {
+            if (position == diabloPosition) {
                 System.out.println(findDiabloPhrase);
                 break;
             } else {
                 System.out.println(getPositionPhrase);
             }
         }
+    }
+
+    public static void battle() {
+        while ((amigoLives >= 0) | (diabloLives >= 0)) {
+            if (amigoAttacks() == diabloDefends()) {
+                diabloAttacks();
+                amigoLostLife();
+                System.out.println(diabloDefendPhrase);
+                if (amigoLives == 0) {
+//                    System.out.println(loosePhrase);
+                    break;
+                }
+            } else {
+                diabloLostLife();
+                System.out.println(amigoAttackPhrase);
+                if (diabloLives == 0) {
+//                    System.out.println(winPhrase);
+                    break;
+                }
+            }
+        }
+    }
+
+    public static boolean isAmigoWin() {
+        return amigoLives > 0;
     }
 
     public static int getRandomNumber(int range) {
