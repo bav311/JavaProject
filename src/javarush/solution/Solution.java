@@ -13,7 +13,7 @@
 В методе main() нужно создать один объект класса RepairDrone.
 В методе main() нужно создать один объект класса RobotCleaner..*/
 
-package javarush;
+package javarush.solution;
 
 
 public class Solution {
