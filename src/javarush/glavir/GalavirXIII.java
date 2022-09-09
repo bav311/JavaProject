@@ -41,4 +41,7 @@ public class GalavirXIII {
         return superWeapon;
     }
 
+    public static void main(String[] args) {
+        System.out.println(superWeapon);
+    }
 }
