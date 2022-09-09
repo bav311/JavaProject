@@ -27,7 +27,7 @@ void метод defend(double) согласно условия.
 В классе GalavirXIII необходимо создать публичный метод attack(),
 который возвращает значение статической переменной superWeapon.*/
 
-package javarush;
+package javarush.glavir;
 
 public class GalavirXIII {
     public static int superWeapon = Integer.MAX_VALUE;
