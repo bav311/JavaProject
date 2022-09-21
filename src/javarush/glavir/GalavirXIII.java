@@ -30,8 +30,10 @@ void метод defend(double) согласно условия.
 package javarush.glavir;
 
 public class GalavirXIII {
-    public static int superWeapon = Integer.MAX_VALUE;
-    public double health = Double.MAX_VALUE;
+//    public static int superWeapon = Integer.MAX_VALUE;
+//public double health = Double.MAX_VALUE;
+public double health = 1_000_000;
+    public static int superWeapon = 200_000;
 
     public void defend(double def) {
         health -= superWeapon/def;

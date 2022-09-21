@@ -8,7 +8,7 @@
 Если не выдержал, то в консоль выводится,
 что вражеский удар не выдержан (переменная nimrodDestroy).
 
-Метод isGalavirAlive(GalavirXIII) проверяетm выдержал ли корабль "Галавир XIII"
+Метод isGalavirAlive(GalavirXIII) проверяет выдержал ли корабль "Галавир XIII"
 атаку корабля "Нимрод". Если выдержал, то в консоль выводится,
 что наша атака успешно отражена врагом (переменная galavirDefence).
  Если не выдержал, то в консоль выводится, что вражеский корабль повержен (переменная galavirDestroy).
@@ -55,18 +55,20 @@ public class BattleField {
     public static void main(String[] args) {
         GalavirXIII galavir = new GalavirXIII();
         Nimrod nimrod = new Nimrod();
-        System.out.println(GalavirXIII.superWeapon);
         do {
             System.out.println(galavirAttack);
             nimrod.defend(galavir.attack());
-            if (nimrod.health < 0) {
-                System.out.println(nimrodDestroy);
+            if (isNimrodAlive(nimrod)) {
+                System.out.println(nimrodAttack);
+                System.out.println("galavir = " + galavir.health);
+                if (isGalavirAlive(galavir)) {
+                    System.out.println(galavirAttack);
+                }
             } else {
-                System.out.println(nimrodDefence);
+                galavir.defend(nimrod.attack());
+                System.out.println("nimrod = " + nimrod.health);
             }
-
-        } while (nimrod.health > 0);
-        System.out.println(nimrod.applyShield(galavir.attack()));
+        } while (galavir.health >= 0);
 
     }
 
