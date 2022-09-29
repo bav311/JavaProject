@@ -31,8 +31,8 @@ public class Nimrod {
         return laser;
     }
 
-    public void defend(int damage) {
-        health -= applyShield(damage);
+    public void defend(int attackGalavir) {
+        health -= applyShield(attackGalavir);
     }
 
    /* public byte applyShield(int x) {

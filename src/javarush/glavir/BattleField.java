@@ -59,16 +59,15 @@ public class BattleField {
             System.out.println(galavirAttack);
             nimrod.defend(galavir.attack());
             if (isNimrodAlive(nimrod)) {
+                System.out.println("Nimrod = " + nimrod.health);
                 System.out.println(nimrodAttack);
-                System.out.println("galavir = " + galavir.health);
-                if (isGalavirAlive(galavir)) {
-                    System.out.println(galavirAttack);
-                }
+                galavir.defendGal(nimrod.attack());
+                System.out.println("Galavir = " + galavir.health);
+
             } else {
-                galavir.defend(nimrod.attack());
                 System.out.println("nimrod = " + nimrod.health);
             }
-        } while (galavir.health >= 0);
+        } while (isNimrodAlive(nimrod) && isGalavirAlive(galavir));
 
     }
 
