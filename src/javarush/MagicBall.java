@@ -19,7 +19,6 @@
         Реализуй метод getPrediction() согласно условию.*/
 
 package javarush;
-
 import java.util.Random;
 
 public class MagicBall {
@@ -32,7 +31,7 @@ public class MagicBall {
             case 1 -> "Определённо да";
             case 2 -> "Вероятнее всего";
             case 3 -> "Хорошие перспективы";
-            case 4 -> " Спроси позже";
+            case 4 -> "Спроси позже";
             case 5 -> "Попробуй снова";
             case 6 -> "Мой ответ — нет";
             case 7 -> "Весьма сомнительно";
