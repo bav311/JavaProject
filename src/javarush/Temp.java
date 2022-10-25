@@ -40,6 +40,41 @@ package javarush;
 public class Temp {
     public static void main(String[] args) {
 
-
+        int dNumber = 21;
+        System.out.println("Десятичное число " + dNumber + " равно восьмеричному числу " + toOctal(dNumber));
+        int oNumber = 25;
+        System.out.println("Восьмеричное число " + oNumber + " равно десятичному числу " + toDecimal(oNumber));
     }
+
+    public static int toOctal(int decimalNumber) {
+        if (decimalNumber < 0) {
+            return 0;
+        }
+        int octalNumber = 0;
+        int i = 0;
+        while (decimalNumber != 0) {
+            int pow = (int) Math.pow(10, i);
+            octalNumber = octalNumber + (decimalNumber % 8) * pow;
+            decimalNumber = decimalNumber / 8;
+            i++;
+        }
+        return octalNumber;
+    }
+
+
+    public static int toDecimal(int octalNumber) {
+        if (octalNumber < 0) {
+            return 0;
+        }
+            int decimalNumber = 0;
+            int i = 0;
+            while (octalNumber != 0) {
+                int pow = (int) Math.pow(8, i);
+                decimalNumber = decimalNumber + (octalNumber % 10) * pow;
+                octalNumber = octalNumber /10;
+            }
+        return decimalNumber;
+    }
+
+
 }
