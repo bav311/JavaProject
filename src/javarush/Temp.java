@@ -3,50 +3,24 @@
 А публичный статический метод toDecimal(int) наоборот — из восьмеричной в десятичную.
 Методы работают только с положительными числами. Если входящий параметр меньше или равен 0,
 методы возвращают 0.
-Твоя задача — реализовать эти методы.
-
-Один из алгоритмов перевода десятичного числа в восьмеричное следующий:
-i равно 0
-while(десятичное число не равно 0) {
-восьмеричное число = восьмеричное число + (остаток от деления десятичного числа на 8) * на 10 в степени i
-десятичное число = десятичное число / 8
-i увеличиваем на 1
-}
-
-Один из алгоритмов перевода восьмеричного числа в десятичное следующий:
-i равно 0
-while(восьмеричное число не равно 0) {
-десятичное число = десятичное число + (остаток от деления восьмеричного числа на 10) * на 8 в степени i
-восьмеричное число = восьмеричное число / 10
-i увеличиваем на 1
-}
-
-Метод main() не принимает участие в тестировании.
-
-Подсказка: чтобы возвести число в степень, можно использовать метод Math.pow(число, степень).
-
-Требования:
-Нужно чтобы метод toOctal(int) был реализован согласно условию.
-Нужно чтобы метод toDecimal(int) был реализован согласно условию.
-Методы Integer.toOctalString(int) и Long.toOctalString(int) использовать нельзя.
-Методы Integer.parseInt(String, int) и Long.parseLong(String, int) использовать нельзя.
-Методы Integer.toString(int, int) и Long.toString(long, int) использовать нельзя.
-Объект типа BigInteger использовать нельзя.
-Объект типа BigDecimal использовать нельзя.*/
+*/
 
 
 package javarush;
 
 public class Temp {
     public static void main(String[] args) {
-
         int dNumber = 21;
-        System.out.println("Десятичное число " + dNumber + " равно восьмеричному числу " + toOctal(dNumber));
         int oNumber = 25;
-        System.out.println("Восьмеричное число " + oNumber + " равно десятичному числу " + toDecimal(oNumber));
+        int bNumber = 10101;
+        System.out.println("Десятичное число " + dNumber + " равно восьмеричному числу " + toOctal8(dNumber));
+        System.out.println("Восьмеричное число " + oNumber + " равно десятичному числу " + toDecimal8(oNumber));
+        System.out.println("Десятичное число " + dNumber + " равно двуричному числу " + toBinary2(dNumber));
+        System.out.println("Двуричное число " + bNumber + " равно десятичному числу " + toDecimal2(bNumber));
+
     }
 
-    public static int toOctal(int decimalNumber) {
+    public static int toOctal8(int decimalNumber) {
         if (decimalNumber < 0) {
             return 0;
         }
@@ -54,25 +28,57 @@ public class Temp {
         int i = 0;
         while (decimalNumber != 0) {
             int pow = (int) Math.pow(10, i);
-            octalNumber = octalNumber + (decimalNumber % 8) * pow;
-            decimalNumber = decimalNumber / 8;
+            octalNumber += decimalNumber % 8 * pow;
+            decimalNumber /=  8;
             i++;
         }
         return octalNumber;
     }
 
 
-    public static int toDecimal(int octalNumber) {
+    public static int toDecimal8(int octalNumber) {
         if (octalNumber < 0) {
             return 0;
         }
-            int decimalNumber = 0;
-            int i = 0;
-            while (octalNumber != 0) {
-                int pow = (int) Math.pow(8, i);
-                decimalNumber = decimalNumber + (octalNumber % 10) * pow;
-                octalNumber = octalNumber /10;
-            }
+        int decimalNumber = 0;
+        int i = 0;
+        while (octalNumber != 0) {
+            int pow = (int) Math.pow(8, i);
+            decimalNumber += octalNumber % 10 * pow;
+            octalNumber /=  10;
+            i++;
+        }
+        return decimalNumber;
+    }
+
+
+    public static int toBinary2(int decimalNumber) {
+        if (decimalNumber < 0) {
+            return 0;
+        }
+        int binaryNumber = 0;
+        int i = 0;
+        while (decimalNumber != 0) {
+            int pow = (int) Math.pow(10, i);
+            binaryNumber += decimalNumber % 2 * pow;
+            decimalNumber /= 2;
+            i++;
+        }
+        return binaryNumber;
+    }
+
+    public static int toDecimal2(int binaryNumber) {
+        if (binaryNumber < 0) {
+            return 0;
+        }
+        int decimalNumber = 0;
+        int i = 0;
+        while (binaryNumber != 0) {
+            int pow = (int) Math.pow(2, i);
+            decimalNumber = decimalNumber + (binaryNumber % 10) * pow;
+            binaryNumber = binaryNumber / 10;
+            i++;
+        }
         return decimalNumber;
     }
 
