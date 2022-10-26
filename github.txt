@@ -1,1 +1,11 @@
+восстановить папку .git?
+
+git init
+git remote add origin git@github.com:bav311/JavaProject.git
+git fetch
+
+
+
+
+
 git@github.com:bav311/JavaProject.git
