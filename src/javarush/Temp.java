@@ -1,46 +1,36 @@
+/*Амиго и Диего нужно взломать базу данных пиратов и внести туда свои имена,
+чтобы выдть себя за пиратов. При этом нужно испортить данные о двух других пиратах.
+
+Тебе нужно реализовать два метода. Первый — corruptDB должен найти в БД пару имен,
+содержащих символ b, и в них заменить все символы b на escape-последовательность \b.
+Второй метод, addTwoNames, должен изменить БД: она должна стать длиннее на 2,
+и в конце содержать два новых имени: "Рыжий Амиго" и "Одноглазый Диего".
+
+Требования:
+Метод corruptDB должен найти в массиве piratesDB два элемента содержащих символ 'b' и
+заменить в них все символы 'b' tа '\b'
+Метод addTwoNames должен записать в piratesDB массив на 2 длиннее, с двумя новыми именами в конце.*/
+
 package javarush;
 
 public class Temp {
-    private static final String HEX = "0123456789ABCDEF";
 
+    public static String[] piratesDB = {
+            "Drax",
+            "Yondu Udonta",
+            "Maz Kanata",
+            "キャプテン・ハーロック",
+            "Star-Lord",
+            "Christopher Summers",
+            "Крысс",
+            "Весельчак У",
+            "Nebula",
+            "Rocket",
+            "Han Solo",
+            "boba Fett"
+    };
     public static void main(String[] args) {
-        int decimalNumber = 1973;
-        String hexNumber = "7B5";
-        System.out.println(decimalNumber + " = " + toHex(decimalNumber));
-
-        System.out.println(toDecimal(hexNumber));
 
 
     }
-
-    public static String toHex(int decimalNumber) {
-        String nextNumber = "";
-        if (decimalNumber < 0) {
-            return nextNumber;
-        }
-        while (decimalNumber != 0) {
-            int i = decimalNumber % 16;
-            char ch = HEX.charAt(i);
-            nextNumber = ch + nextNumber;
-            decimalNumber /= 16;
-        }
-        return nextNumber;
-    }
-
-
-    public static int toDecimal (String hexNumber) {
-        int decimalNumber = 0;
-        if (hexNumber == null || hexNumber.equals("")) {
-            return decimalNumber;
-        }
-
-        for (int i = 0; i < hexNumber.length(); i++) {
-            char fromNexNumber = hexNumber.charAt(i);
-            int index = HEX.indexOf(fromNexNumber);
-            decimalNumber = 16 * decimalNumber + index;
-        }
-        return decimalNumber;
-    }
-
-
 }
