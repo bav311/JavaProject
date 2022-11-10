@@ -13,9 +13,13 @@
 
 package javarush;
 
+import java.util.Arrays;
+
 public class Temp {
 
     public static String[] piratesDB = {
+            "Nebula",
+            "boba Fett",
             "Drax",
             "Yondu Udonta",
             "Maz Kanata",
@@ -24,13 +28,29 @@ public class Temp {
             "Christopher Summers",
             "Крысс",
             "Весельчак У",
-            "Nebula",
-            "Rocket",
             "Han Solo",
-            "boba Fett"
+            "Rocket b"
     };
+
     public static void main(String[] args) {
-
-
+        System.out.println(Arrays.toString(piratesDB));
+        corruptDB(piratesDB);
+        System.out.println(Arrays.toString(piratesDB));
     }
+
+    public static void corruptDB(String[] array) {
+        int count = 0;
+        for (int i = 0; i < array.length; i++) {
+                if (array[i].contains("b")) {
+                    if (count < 2) {
+                    array[i] = array[i].replace("b", "\b");
+                    count++;
+                }
+            }
+        }
+    }
+
+
 }
+
+
