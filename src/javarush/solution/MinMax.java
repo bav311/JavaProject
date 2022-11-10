@@ -1,4 +1,4 @@
-package javarush;
+package javarush.solution;
 
 public class MinMax {
       public static int min (int x, int y) {

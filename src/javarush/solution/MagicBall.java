@@ -18,7 +18,7 @@
         Требования:
         Реализуй метод getPrediction() согласно условию.*/
 
-package javarush;
+package javarush.solution;
 import java.util.Random;
 
 public class MagicBall {

@@ -4,7 +4,7 @@
 В методе main вызови метод destroyDeadMan(String) для каждого мертвеца из списка deadMen,
 результат вызова выведи на экран.*/
 
-package javarush;
+package javarush.solution;
 
 
 public class Castle {
@@ -12,8 +12,7 @@ public class Castle {
             "мертвец_6", "мертвец_7", "мертвец_8"};
 
     public static void main(String[] args) {
-        for (int i = 0; i < deadMen.length; i++) {
-            String str = deadMen[i];
+        for (String str : deadMen) {
             System.out.println(destroyDeadMan(str));
         }
     }

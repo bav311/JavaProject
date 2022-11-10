@@ -1,4 +1,4 @@
-package javarush;
+package javarush.solution;
 public class ChessBoard {
     public static String chessBoardCord(int a, int b) {
         String letters = "abcdefgh";

@@ -19,7 +19,7 @@
 пока тот не вернет то же число, с которым его вызвали.
 Подобрать правильное число нужно менее чем за 30 попыток.*/
 
-package javarush;
+package javarush.solution;
 
 import java.util.Random;
 

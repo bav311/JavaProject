@@ -1,4 +1,4 @@
-package javarush;
+package javarush.solution;
 
 public class SystemNumber {
 

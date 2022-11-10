@@ -1,5 +1,5 @@
 //firstArray и secondArray в один массив resultArray
-package javarush;
+package javarush.solution;
 import java.util.Arrays;
 
 class ConcatArrrays {

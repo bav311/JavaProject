@@ -14,7 +14,7 @@ sin(x) * Pi + cos(y) * min(x, y, z) + tn(y) / ln(z) где min(x, y, z) - это
 
 */
 
-package javarush;
+package javarush.solution;
 
 
 import java.util.Arrays;

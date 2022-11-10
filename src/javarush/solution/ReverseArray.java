@@ -13,7 +13,7 @@
 Требования:
 Метод reverseArray() должен менять порядок элементов массива на обратный.*/
 
-package javarush;
+package javarush.solution;
 
 
 class ReverseArray {

@@ -1,4 +1,4 @@
-package javarush;
+package javarush.solution;
 
 public class PowerOfTwo {
     public static void main(String[] args) {

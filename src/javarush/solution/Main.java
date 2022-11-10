@@ -14,7 +14,7 @@ Requirements:
 5. Метод main() должен вызывать метод getArrayOfTenElements().
 6. Метод main() должен вызывать метод min(int[]).
 */
-package javarush;
+package javarush.solution;
 
 import java.util.Arrays;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package javarush;
+package javarush.solution;
 
 
 import java.util.Arrays;

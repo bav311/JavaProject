@@ -2,7 +2,7 @@
 незаполненный прямоугольник (его контур)
 размером 10 (высота) на 20 (ширина) из букв 'Б'.
 Незаполненная часть состоит из пробелов. */
-package javarush;
+package javarush.solution;
 class UnfilledRectangle_04_00 {
     public static void main(String[] args) {
         int hei = 1;

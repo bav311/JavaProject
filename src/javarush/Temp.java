@@ -35,14 +35,15 @@ public class Temp {
     public static void main(String[] args) {
         System.out.println(Arrays.toString(piratesDB));
         corruptDB(piratesDB);
-        System.out.println(Arrays.toString(piratesDB));
+//        addTwoNames(piratesDB);
+        System.out.println(Arrays.toString(addTwoNames(piratesDB)));
     }
 
     public static void corruptDB(String[] array) {
         int count = 0;
         for (int i = 0; i < array.length; i++) {
-                if (array[i].contains("b")) {
-                    if (count < 2) {
+            if (array[i].contains("b")) {
+                if (count < 2) {
                     array[i] = array[i].replace("b", "\b");
                     count++;
                 }
@@ -50,7 +51,8 @@ public class Temp {
         }
     }
 
+    public static String[] addTwoNames(String[] ar) {
+        return Arrays.copyOf(ar, ar.length + 2);
+    }
 
 }
-
-

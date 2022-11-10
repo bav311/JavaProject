@@ -1,4 +1,4 @@
-package javarush;
+package javarush.solution;
 public class ArrayPrint {
 
     public ArrayPrint(int[][] mas) {

@@ -1,4 +1,4 @@
-package javarush;
+package javarush.solution;
 
 class Level05lec03 {
     public static void main(String[] args) {

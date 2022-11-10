@@ -16,7 +16,7 @@ a & ~(1 << b) reset flag
 */
 
 
-package javarush;
+package javarush.solution;
 
 public class Flag {
 

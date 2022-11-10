@@ -1,5 +1,5 @@
 /*{"Hello", "Hello", "World", "Java", "Tasks", "World"} */
-package javarush;
+package javarush.solution;
 
 class Level05lec04 {
     public static void main(String[] args) {
@@ -10,9 +10,8 @@ class Level05lec04 {
             }
         }
 
-        for (int i = 0; i < table.length; i++){
-            for (int j = 0; j < table[i].length; j++)
-                System.out.print(table[i][j] + "\t");
+        for (int[] ints : table) {
+            for (int anInt : ints) System.out.print(anInt + "\t");
             System.out.println();
         }
 
