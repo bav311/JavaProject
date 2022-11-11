@@ -1,58 +1,39 @@
-/*Амиго и Диего нужно взломать базу данных пиратов и внести туда свои имена,
-чтобы выдть себя за пиратов. При этом нужно испортить данные о двух других пиратах.
+/*
+В этой задаче тебе нужно выполнить проверку URL-адреса.
 
-Тебе нужно реализовать два метода. Первый — corruptDB должен найти в БД пару имен,
-содержащих символ b, и в них заменить все символы b на escape-последовательность \b.
-Второй метод, addTwoNames, должен изменить БД: она должна стать длиннее на 2,
-и в конце содержать два новых имени: "Рыжий Амиго" и "Одноглазый Диего".
+Простая схема URL-адреса выглядит так:
+<сетевой протокол>://<название ресурса>.<домен>
+
+Метод checkProtocol(String) проверяет, какой сетевой протокол
+(http или https) у URL-адреса, полученного входящим параметром,
+и возвращает результат проверки — строку название сетевого протокола.
+А метод checkDomain(String) проверяет, какой домен (com, net, org или ru)
+у URL-адреса, полученного входящим параметром, и возвращает результат проверки —
+строку название домена.
+
+Если URL-адрес начинается не с http или https, то результат будет — "неизвестный".
+ Если URL-адрес заканчивается не на com, net, org или ru, то результат будет — "неизвестный".
+
+main не принимает участие в тестировании.
 
 Требования:
-Метод corruptDB должен найти в массиве piratesDB два элемента содержащих символ 'b' и
-заменить в них все символы 'b' tа '\b'
-Метод addTwoNames должен записать в piratesDB массив на 2 длиннее, с двумя новыми именами в конце.*/
+Нужно, чтобы метод checkProtocol(String) был реализован согласно условию.
+Нужно, чтобы метод checkDomain(String) был реализован согласно условию.*/
+
 
 package javarush;
 
-import java.util.Arrays;
-
 public class Temp {
-
-    public static String[] piratesDB = {
-            "Nebula",
-            "boba Fett",
-            "Drax",
-            "Yondu Udonta",
-            "Maz Kanata",
-            "キャプテン・ハーロック",
-            "Star-Lord",
-            "Christopher Summers",
-            "Крысс",
-            "Весельчак У",
-            "Han Solo",
-            "Rocket b"
-    };
-
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(piratesDB));
-        corruptDB(piratesDB);
-//        addTwoNames(piratesDB);
-        System.out.println(Arrays.toString(addTwoNames(piratesDB)));
-    }
+        String[] urls = {"https://javarush.ru", "https://google.com", "http://wikipedia.org", "facebook.com", "https://instagram", "codegym.cc"};
 
-    public static void corruptDB(String[] array) {
-        int count = 0;
-        for (int i = 0; i < array.length; i++) {
-            if (array[i].contains("b")) {
-                if (count < 2) {
-                    array[i] = array[i].replace("b", "\b");
-                    count++;
-                }
-            }
-        }
-    }
+        System.out.println("У URL-адреса - " + url + ", сетевой протокол - " + protocol + ", домен - " + domain);
 
-    public static String[] addTwoNames(String[] ar) {
-        return Arrays.copyOf(ar, ar.length + 2);
-    }
 
+
+
+
+
+
+    }
 }
