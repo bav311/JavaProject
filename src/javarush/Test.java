@@ -5,12 +5,15 @@ import java.util.Arrays;
 public class Test {
 
     public static void main(String[] args) {
-        String[] ar = {"1", "2"};
-        System.out.println(Arrays.toString(addTwoNames(ar)));
+        String[] array = {"1", "2"};
+        addTwoNames(array);
+                System.out.println(Arrays.toString(array));
 
     }
 
-    public static String[] addTwoNames(String[] ar) {
-        return Arrays.copyOf(ar, ar.length + 2);
+    public static void addTwoNames(String[] ar) {
+        String [] newar = new String[0];
+        newar = Arrays.copyOf(ar, newar.length + 2);
+
     }
 }

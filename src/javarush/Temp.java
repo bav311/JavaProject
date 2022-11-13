@@ -20,23 +20,23 @@ public class Temp {
     public static String[] piratesDB = {
             "Nebula",
             "boba Fett",
-            "Drax",
-            "Yondu Udonta",
-            "Maz Kanata",
-            "キャプテン・ハーロック",
-            "Star-Lord",
-            "Christopher Summers",
-            "Крысс",
-            "Весельчак У",
-            "Han Solo",
-            "Rocket b"
+//            "Drax",
+//            "Yondu Udonta",
+//            "Maz Kanata",
+//            "キャプテン・ハーロック",
+//            "Star-Lord",
+//            "Christopher Summers",
+//            "Крысс",
+//            "Весельчак У",
+//            "Han Solo",
+//            "Rocket b"
     };
 
     public static void main(String[] args) {
         System.out.println(Arrays.toString(piratesDB));
         corruptDB(piratesDB);
-//        addTwoNames(piratesDB);
-        System.out.println(Arrays.toString(addTwoNames(piratesDB)));
+        addTwoNames(piratesDB);
+        System.out.println(Arrays.toString(piratesDB));
     }
 
     public static void corruptDB(String[] array) {
@@ -51,8 +51,9 @@ public class Temp {
         }
     }
 
-    public static String[] addTwoNames(String[] ar) {
-        return Arrays.copyOf(ar, ar.length + 2);
+    public static String[] addTwoNames(String[] array) {
+        String[] newArray = new String[0];
+        return newArray = Arrays.copyOf(array, array.length + 2);
     }
 
 }
