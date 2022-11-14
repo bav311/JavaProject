@@ -24,10 +24,32 @@ main не принимает участие в тестировании.
 package javarush;
 
 public class Temp {
-    public static void main(String[] args) {
-        String[] urls = {"https://javarush.ru", "https://google.com", "http://wikipedia.org", "facebook.com", "https://instagram", "codegym.cc"};
+    public static String checkProtocol(String url) {
+        if (url.startsWith("https://")) {
+            return "https";
+        }
+        if (url.startsWith("http://")) {return "http";}
+        return "неизвестный";
+    }
 
+
+    public static void main(String[] args) {
+        String[] urls = {
+                "https://javarush.ru",
+                "https://google.com",
+                "http://wikipedia.org",
+                "facebook.com",
+                "https://instagram",
+                "codegym.cc"
+        };
+
+        for (String url : urls) {
+            String protocol = checkProtocol(url);
+            System.out.println("У URL-адреса - " + url + ", сетевой протокол - " + protocol + ", домен - ");
+
+        }
 
 
     }
 }
+
