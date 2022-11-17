@@ -28,7 +28,10 @@ public class Temp {
         if (url.startsWith("https://")) {
             return "https";
         }
-        if (url.startsWith("http://")) {return "http";}
+        if (url.startsWith("http://")) {
+            return "http";
+        }
+
         return "неизвестный";
     }
 
