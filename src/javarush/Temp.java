@@ -36,6 +36,30 @@ public class Temp {
     }
 
 
+    public static  String checkDomain(String url) {
+/*        if (url.endsWith("ru")) {
+            return "ru";
+        }
+        if (url.endsWith("com")) {
+            return "com";
+        }
+
+        if (url.endsWith("org")) {
+            return "org";
+        }
+
+        return "неизвестный";*/
+        String [] domain = url.split("\\.");
+        return switch (domain[1]) {
+            case "com" -> "com";
+            case "net" -> "net";
+            case "org" -> "org";
+            case "ru" -> "ru";
+            default -> "неизвестный";
+        };
+    }
+
+
     public static void main(String[] args) {
         String[] urls = {
                 "https://javarush.ru",
@@ -48,7 +72,8 @@ public class Temp {
 
         for (String url : urls) {
             String protocol = checkProtocol(url);
-            System.out.println("У URL-адреса - " + url + ", сетевой протокол - " + protocol + ", домен - ");
+            String domain = checkDomain(url);
+            System.out.println("У URL-адреса - " + url + ", сетевой протокол - " + protocol + ", домен - " + domain);
 
         }
 
