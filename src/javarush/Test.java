@@ -4,19 +4,51 @@ package javarush;
 public class Test {
 
     public static void main(String[] args) {
-             String path = "https://domen.ru/about/reviews";
+        String string = "Чтобы стать программистом, нужно писать код. " +
+                        "Чтобы писать код, нужно учиться. " +
+                        "Чтобы учиться, нужно желание.";
+        String word = "код";
+        int indexFromFirstWord = getIndexFromFirstWord(string, word);
+        int indexFromLastWord = getIndexFromLastWord(string, word);
+        System.out.println("Индекс первого символа первого слова \"" + word + "\" равен - " + indexFromFirstWord);
+        System.out.println("Индекс первого символа последнего слова \"" + word + "\" равен - " + indexFromLastWord);
+    }
 
-        int index = path.indexOf("//");
-        int index2 = path.indexOf("/", index + 2);
+    public static int getIndexFromFirstWord (String text, String wordIn) {
+        return text.indexOf(wordIn);
+    }
 
-        String first = path.substring(0,index +2);
-        String last = path.substring(index2);
-
+    public static int getIndexFromLastWord (String text, String wordIn) {
+    return text.lastIndexOf(wordIn);
+    }
         String result = first + "javarush.ru" + last;
         System.out.println(result);
-
-
-    }
 }
+
+
+
+/*Метод getIndexFromFirstWord(String, String) и
+метод getIndexFromLastWord(String, String) принимают строку и слово.
+Нужно, чтобы метод getIndexFromFirstWord(String, String)
+вернул индекс первого символа первого слова (второй параметр метода)
+в строке (первый параметр метода).
+А метод getIndexFromLastWord(String, String) вернул индекс первого символа последнего слова
+(второй параметр метода) в строке (первый параметр метода).
+
+Пример:
+строка — "Чтобы стать программистом, нужно писать код.
+Чтобы писать код, нужно учиться. Чтобы учиться, нужно желание."
+слово — "код"
+
+метод getIndexFromFirstWord(строка, слово) должен вернуть 40
+метод getIndexFromLastWord(строка, слово) должен вернуть 58
+Метод main() не принимает участия в тестировании.
+
+Требования:
+Нужно вывести на экран индекс первого символа первого слова
+(второй параметр метода) в строке (первый параметр метода).
+
+Нужно вывести на экран индекс первого символа последнего слова
+(второй параметр метода) в строке (первый параметр метода).*/
 
 
