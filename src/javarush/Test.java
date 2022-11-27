@@ -14,8 +14,6 @@ public class Test {
 
         String result = first + "javarush.ru" + last;
         System.out.println(result);
-        System.out.println(first);
-        System.out.println(last);
 
 
     }

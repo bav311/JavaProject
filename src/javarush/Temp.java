@@ -21,6 +21,7 @@ main не принимает участие в тестировании.
 Нужно, чтобы метод checkDomain(String) был реализован согласно условию.*/
 
 
+
 package javarush;
 
 public class Temp {
