@@ -1,54 +1,34 @@
+/*Реализуй метод changePath(String, String)
+так, чтобы он заменял версию jdk в пути, полученном первым параметром метода,
+на версию, полученную вторым параметром, и возвращал новый путь.
+Версия jdk начинается со строки "jdk" и заканчивается на "/".
+
+Пример:
+путь — "/usr/java/jdk1.8/bin/"
+версия jdk — "jdk-13"
+
+Метод changePath(путь, версия jdk) должен вернуть путь — "/usr/java/jdk-13/bin/".
+Метод main() не принимает участия в тестировании.
+
+Требования:
+Нужно, чтобы метод changePath(String, String) был реализован согласно условию.*/
+
 package javarush;
 
 
 public class Test {
-
     public static void main(String[] args) {
-        String string = "Чтобы стать программистом, нужно писать код. " +
-                        "Чтобы писать код, нужно учиться. " +
-                        "Чтобы учиться, нужно желание.";
-        String word = "код";
-        int indexFromFirstWord = getIndexFromFirstWord(string, word);
-        int indexFromLastWord = getIndexFromLastWord(string, word);
-        System.out.println("Индекс первого символа первого слова \"" + word + "\" равен - " + indexFromFirstWord);
-        System.out.println("Индекс первого символа последнего слова \"" + word + "\" равен - " + indexFromLastWord);
+        String path = "/usr/java/jdk1.8/bin/";
+
+        String jdk13 = "jdk-13";
+        System.out.println(changePath(path, jdk13));
+
     }
 
-    public static int getIndexFromFirstWord (String text, String wordIn) {
-        return text.indexOf(wordIn);
-    }
+    public static String changePath (String path, String change ){
+         int index = path.indexOf("jdk");
+         int index1 = path.indexOf("/",index+2);
 
-    public static int getIndexFromLastWord (String text, String wordIn) {
-    return text.lastIndexOf(wordIn);
+         return null;
     }
-        String result = first + "javarush.ru" + last;
-        System.out.println(result);
 }
-
-
-
-/*Метод getIndexFromFirstWord(String, String) и
-метод getIndexFromLastWord(String, String) принимают строку и слово.
-Нужно, чтобы метод getIndexFromFirstWord(String, String)
-вернул индекс первого символа первого слова (второй параметр метода)
-в строке (первый параметр метода).
-А метод getIndexFromLastWord(String, String) вернул индекс первого символа последнего слова
-(второй параметр метода) в строке (первый параметр метода).
-
-Пример:
-строка — "Чтобы стать программистом, нужно писать код.
-Чтобы писать код, нужно учиться. Чтобы учиться, нужно желание."
-слово — "код"
-
-метод getIndexFromFirstWord(строка, слово) должен вернуть 40
-метод getIndexFromLastWord(строка, слово) должен вернуть 58
-Метод main() не принимает участия в тестировании.
-
-Требования:
-Нужно вывести на экран индекс первого символа первого слова
-(второй параметр метода) в строке (первый параметр метода).
-
-Нужно вывести на экран индекс первого символа последнего слова
-(второй параметр метода) в строке (первый параметр метода).*/
-
-
