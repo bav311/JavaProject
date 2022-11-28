@@ -1,34 +1,31 @@
-/*Реализуй метод changePath(String, String)
-так, чтобы он заменял версию jdk в пути, полученном первым параметром метода,
-на версию, полученную вторым параметром, и возвращал новый путь.
-Версия jdk начинается со строки "jdk" и заканчивается на "/".
+/*Моральный блок Стального Стива заполнен вредоносными элементами,
+которые делают пиратского капитана очень кровожадным и аморальным.
 
-Пример:
-путь — "/usr/java/jdk1.8/bin/"
-версия jdk — "jdk-13"
+В этой задаче требуется в методе cleanMorals исправить статический
+массив morals класса Solution, заменив негативные моральные элементы на позитивные.
 
-Метод changePath(путь, версия jdk) должен вернуть путь — "/usr/java/jdk-13/bin/".
-Метод main() не принимает участия в тестировании.
-
+Для этого требуется:
+Заменить все элементы, в которых присутствует текст "killer" (без учета регистра), на слово "compassion" (сострадание).
+Заменить все элементы, в которых присутствует текст "thief" (без учета регистра), на слово "fairness" (справедливость).
+Заменить все элементы, в которых присутствует текст "bully" (без учета регистра), на слово "respect" (уважение).
+Метод main не участвует в проверке.
 Требования:
-Нужно, чтобы метод changePath(String, String) был реализован согласно условию.*/
-
+Не изменяй массив morals в классе Solution.
+Метод cleanMorals должен изменять массив morals согласно условиям.*/
 package javarush;
-
+import java.util.Arrays;
 
 public class Test {
+    public static String[][] morals = {
+            {"iAmAKiller", "iAmAThief", "honesty", "responsibility", "iAmABully"},
+            {"BuLLyIAmA", "honesty", "iamakiller", "iamathief", "responsibility"},
+            {"honesty", "iamabully", "responsibility", "AthiefIAm", "ikillerAmA"},
+    };
     public static void main(String[] args) {
-        String path = "/usr/java/jdk1.8/bin/";
 
-        String jdk13 = "jdk-13";
-        System.out.println(changePath(path, jdk13));
-
-    }
-
-    public static String changePath (String path, String change ){
-         int index = path.indexOf("jdk");
-         int index1 = path.indexOf("/",index+2);
-
-         return null;
+//        cleanMorals();
+        for (String[] strings : morals) {
+            System.out.println(Arrays.toString(strings));
+        }
     }
 }
