@@ -22,10 +22,44 @@ public class Test {
             {"honesty", "iamabully", "responsibility", "AthiefIAm", "ikillerAmA"},
     };
     public static void main(String[] args) {
+        for (String[] strings : morals) {
+            System.out.println(Arrays.toString(strings));
+        }
+        System.out.println();
 
-//        cleanMorals();
+        cleanMorals(morals);
         for (String[] strings : morals) {
             System.out.println(Arrays.toString(strings));
         }
     }
+
+    public static void cleanMorals (String [][] oldMorals){
+        for (int i = 0; i < oldMorals.length; i++) {
+            for (int j = 0; j < oldMorals[i].length; j++) {
+                if (morals[i][j].toLowerCase().contains("KiLLer".toLowerCase())) {
+                    morals[i][j] = "compassion";
+                }
+/*                if (morals[i][j].toLowerCase().contains("killer")) {
+                    int path = morals[i][j].toLowerCase().indexOf("killer");
+                    String word = morals[i][j].substring(path, path + 6);
+                    morals[i][j] = morals[i][j].replace(word, "compassion");
+                }
+
+                if (morals[i][j].toLowerCase().contains("thief")) {
+                    int path = morals[i][j].toLowerCase().indexOf("thief");
+                    String word = morals[i][j].substring(path, path + 5);
+                    morals[i][j] = morals[i][j].replace(word, "fairness");
+                }
+
+                if (morals[i][j].toLowerCase().contains("bully")) {
+                    int path = morals[i][j].toLowerCase().indexOf("bully");
+                    String word = morals[i][j].substring(path, path + 5);
+                    morals[i][j] = morals[i][j].replace(word, "respect");
+                }*/
+            }
+
+        }
+    }
+
+
 }
