@@ -13,6 +13,7 @@
 Не изменяй массив morals в классе Solution.
 Метод cleanMorals должен изменять массив morals согласно условиям.*/
 package javarush;
+
 import java.util.Arrays;
 
 public class Test {
@@ -21,6 +22,7 @@ public class Test {
             {"BuLLyIAmA", "honesty", "iamakiller", "iamathief", "responsibility"},
             {"honesty", "iamabully", "responsibility", "AthiefIAm", "ikillerAmA"},
     };
+
     public static void main(String[] args) {
         for (String[] strings : morals) {
             System.out.println(Arrays.toString(strings));
@@ -33,7 +35,7 @@ public class Test {
         }
     }
 
-    public static void cleanMorals (String [][] oldMorals){
+    public static void cleanMorals(String[][] oldMorals) {
         for (int i = 0; i < oldMorals.length; i++) {
             for (int j = 0; j < oldMorals[i].length; j++) {
                 if (morals[i][j].toLowerCase().contains("KiLLer".toLowerCase())) {
@@ -60,6 +62,5 @@ public class Test {
 
         }
     }
-
 
 }
