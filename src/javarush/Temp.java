@@ -1,6 +1,5 @@
 package javarush;
 
-import java.sql.SQLOutput;
 import java.util.Arrays;
 
 public class Temp {
@@ -61,17 +60,15 @@ public class Temp {
         System.out.println("///////////////////////////////////////////////////////////////////");
 
         int index1 = str6.indexOf(" ");
-        int index2 = str6.indexOf(" ", index1+2);
-        String first = str6.substring(0,index1);
+        int index2 = str6.indexOf(" ", index1 + 2);
+        String first = str6.substring(0, index1);
         String second = str6.substring(index2);
         System.out.println(second.concat(first));
         System.out.println("----------------------------------------------------------");
         System.out.println(str6.repeat(5));
         System.out.println(str7);
-        System.out.println(str7.replace("ов","999"));
-        System.out.println(str7.replaceAll("ов","999"));
-
-
+        System.out.println(str7.replace("ов", "999"));
+        System.out.println(str7.replaceAll("ов", "999"));
 
 
     }
