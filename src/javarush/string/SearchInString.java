@@ -15,7 +15,7 @@
 Нужно вывести на экран индекс первого символа последнего слова (второй параметр метода) в строке (первый параметр метода).
 */
 
-package javarush;
+package javarush.string;
 
 
 public class SearchInString {
