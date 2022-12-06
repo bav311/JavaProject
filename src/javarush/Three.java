@@ -2,7 +2,7 @@ package javarush;
 
 import java.util.Arrays;
 
-public class Temp {
+public class Three {
     public static void main(String[] args) {
         String str1 = "str";
         String str2 = new String();

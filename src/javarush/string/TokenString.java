@@ -21,10 +21,10 @@ public class TokenString {
 
     public static void main(String[] args) {
 
-        String packagePath = "java.util.stream";
+        String packagePath = "iAm/A/spyware/one";
 
 
-        String[] tokens = getTokens(packagePath, "\\.");
+        String[] tokens = getTokens(packagePath, "/");
         System.out.println(Arrays.toString(tokens));
     }
 

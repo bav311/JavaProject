@@ -24,11 +24,11 @@ splitArrayElements и getStringFromArray.
 Метод splitArrayElements должен изменять элементы массива controlUnits согласно условиям.
 Метод getStringFromArray должен изменять элементы массива controlUnits согласно условиям.*/
 
-package javarush;
+package javarush.string;
 
 import java.util.StringTokenizer;
 
-public class One {
+public class PirateLiberation {
     public static String[] controlUnits = {"iAm/A/spyware/one", "iAm/A/malware/two", "iAm/A/virus/three", "iAm/A/trojan/four", "iAm/bug/five"};
 
     public static void main(String[] args) {
