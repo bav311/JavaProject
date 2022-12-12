@@ -1,6 +1,9 @@
 /*Эта задача нужна для понимания того, как вызывается конструктор базового класса (родителя).
 У тебя есть классы ElectricCar, GasCar, HybridCar, которые наследуют класс Car.
-Тебе нужно в конструкторах наследников класса Car передать тип автомобиля в конструктор базового класса (родителя), используя super("тип автомобиля"). Для этого в классе Solution в методе main создай 3 объекта: HybridCar, GasCar и ElectricCar.
+Тебе нужно в конструкторах наследников класса Car передать тип автомобиля
+в конструктор базового класса (родителя),
+используя super("тип автомобиля").
+Для этого в классе Solution в методе main создай 3 объекта: HybridCar, GasCar и ElectricCar.
 
 Вывод должен быть следующий (последовательность может быть любая):
 Привет. Я ElectricCar
@@ -17,8 +20,9 @@ package javarush.test;
 
 public class Solution {
     public static void main(String[] args) {
-        HybridCar hybrid = new HybridCar("HybridCar");
-        GasCar gas = new GasCar("GasCar");
-        ElectricCar elec = new ElectricCar("ElectricCar");
+        ElectricCar electricCar = new ElectricCar("dfdsf");
+
     }
 }
+
+//https://javarush.com/groups/posts/1187-raznica-mezhdu-kljuchevihmi-slovami-this-i-super-v-java
