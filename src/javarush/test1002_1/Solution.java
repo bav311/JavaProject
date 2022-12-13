@@ -16,12 +16,16 @@
 Наследники класса Car должны вызывать конструктор базового класса с соответствующим аргументом.
 В методе main должно быть создано 3 объекта классов HybridCar, GasCar и ElectricCar.
 Вывод должен соответствовать условию.*/
-package javarush.test;
+package javarush.test1002_1;
 
 public class Solution {
     public static void main(String[] args) {
-        ElectricCar electricCar = new ElectricCar("dfdsf");
-
+//        ElectricCar electricCar = new ElectricCar();
+//        GasCar gasCar = new GasCar();
+//        HybridCar hybridCar = new HybridCar();
+        new ElectricCar();
+        new GasCar();
+        new HybridCar();
     }
 }
 

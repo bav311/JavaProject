@@ -5,6 +5,11 @@ public class Person {
     private String address;
     private double balance;
 
+/*    public Person(String name, String address, double balance) {
+        this.name = name;
+        this.address = address;
+        this.balance = balance;
+    }*/
 
     public String getName() {
         System.out.print("Name is ");
