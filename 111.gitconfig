@@ -1,0 +1,13 @@
+[user]
+	name = Andrew from Job
+	email = bav311@yandex.ru
+[safe]
+	directory = F:/JP2022
+[alias]
+
+
+[core]
+	autocrlf = true
+	safecrlf = warn
+	quotepath = off
+	editor = 'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin
