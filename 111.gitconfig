@@ -1,0 +1,7 @@
+[safe]
+	directory = E:/TEST/JavaProject
+[user]
+	name = bav311-W10
+	email = bav311@yandex.ru
+[pull]
+	rebase = false
