@@ -1,3 +1,6 @@
+онлайн компилятор
+https://www.onlinegdb.com/onjykfqy rjvgbkznjh
+log/pass Andrew/1-9
 Памятка по GIT https://training.github.com/downloads/ru/github-git-cheat-sheet/
 
 https://javarush.ru/groups/posts/2683-nachalo-rabotih-s-git-podrobnihy-gayd-dlja-novichkov
