@@ -1,3 +1,5 @@
+git config --global pull.rebase false
+
 онлайн компилятор
 https://www.onlinegdb.com/onjykfqy rjvgbkznjh
 log/pass Andrew/1-9
