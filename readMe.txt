@@ -1,8 +1,8 @@
 git config --global pull.rebase false
 
 онлайн компилятор
-https://www.onlinegdb.com/onjykfqy rjvgbkznjh
-log/pass Andrew/1-9
+https://www.onlinegdb.com/online_java_compiler
+log/pass Andrew/1-9 	fasorif401@naymedia.com
 
 Памятка по GIT https://training.github.com/downloads/ru/github-git-cheat-sheet/
 
